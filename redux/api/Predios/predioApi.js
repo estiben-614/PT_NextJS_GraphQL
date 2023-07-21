@@ -61,6 +61,7 @@ export const prediosApi = createApi({
         })
       })
     }),
+
     addPredio: builder.mutation({
       query: (variables) => ({
         url: '/',
@@ -93,6 +94,67 @@ export const prediosApi = createApi({
         }),
       }),
     }),
+
+    deletePredioById:builder.mutation({
+      query: (id_predio) => ({
+        url: '/',
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify({
+          query: `
+          mutation DeletePredioById($id_predio: Int!) {
+            delete_predio_by_pk(id_predio: $id_predio) {
+              nombre
+              numero_predial
+              municipio
+              id_predio
+              departamento
+              avaluo
+            }
+          }
+          `,
+          variables:{id_predio:id_predio},
+        }),
+      }),
+    }),
+
+    updatePredioById:builder.mutation({
+      query: (variables) => ({ 
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify({
+          query: `
+          mutation UpdatePredioById(
+            $id_predio: Int!, 
+            $avaluo: numeric!,
+              $departamento: String!,
+              $municipio: String!,
+              $nombre: String!,
+          ) {
+            update_predio_by_pk(
+              pk_columns: { id_predio: $id_predio },
+              _set: {
+                avaluo: $avaluo,
+                departamento: $departamento,
+                municipio: $municipio,
+                nombre: $nombre,
+              }
+            ) {
+              id_predio
+              avaluo
+              departamento
+              municipio
+              nombre
+              numero_predial
+            }
+          }
+          `,
+          variables:{...variables},
+        }),
+      }),
+    }),
+
+
   }),
     
     
@@ -101,4 +163,4 @@ export const prediosApi = createApi({
   })
 
 //createApi crea useCustom de los endpoints
-export const { useGetPrediosQuery,useGetPredioByIdQuery,useAddPredioMutation } = prediosApi
+export const { useGetPrediosQuery,useGetPredioByIdQuery,useAddPredioMutation,useDeletePredioByIdMutation,useUpdatePredioByIdMutation } = prediosApi
