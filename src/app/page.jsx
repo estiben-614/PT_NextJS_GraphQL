@@ -1,6 +1,6 @@
 import { Button, Card, DatePicker, Space } from 'antd';
-import { PrediosCard } from './Components/PrediosCard';
 import { AddPredioModal } from './Components/modal/addPredioModal';
+import { PrediosCard } from './PrediosCard';
 
 
 export default function Home() {
@@ -9,7 +9,6 @@ export default function Home() {
     <>
       <AddPredioModal></AddPredioModal>  
       <PrediosCard></PrediosCard>
-        
     </>
   )
 }

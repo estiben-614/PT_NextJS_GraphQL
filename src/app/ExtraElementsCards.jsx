@@ -3,18 +3,18 @@ import { DeleteOutlined, EditOutlined } from '@ant-design/icons'
 import { Button, Space, message } from 'antd'
 import Link from 'next/link'
 import React from 'react'
-import { useDeletePredioByIdMutation, useGetPrediosQuery } from '../../../redux/api/Predios/predioApi'
+import { useDeletePredioByIdMutation, useGetPrediosQuery } from '../../redux/api/Predios/predioApi'
 
-export const ExtraElementsCards = ({abrirModal,idPredio,nombrePredio}) => {
+export const ExtraElementsCards = ({idPredio,predio,abrirModalInfo,abrirModalActualizacion}) => {
 
     const [deletePredioById]=useDeletePredioByIdMutation()
 
-    //Obtenemos el refetch
+    //Obtenemos el refetch de los predios
     const { refetch } = useGetPrediosQuery();
 
     // Mensajes
   const successMessage = () => {
-    message.success(`El predio ${nombrePredio} se eliminó con éxito`);
+    message.success(`El predio ${predio.nombre} se eliminó con éxito`);
   };
 
   const errorMessage = () => {
@@ -33,12 +33,12 @@ export const ExtraElementsCards = ({abrirModal,idPredio,nombrePredio}) => {
   return (
     <>
     <Space direction="horizontal" >
-
-        <Button icon={<EditOutlined />} onClick={abrirModal}></Button>
+        {/* Abre el modal de modal de Actualizacion */}
+        <Button icon={<EditOutlined /> }onClick={abrirModalActualizacion} ></Button>
         <Button icon={<DeleteOutlined />} onClick={onDeletePredio}></Button>
 
-
-        <Link href="#" onClick={abrirModal}>More</Link>
+        {/* Abre el modal de información */}
+        <Link href="#" onClick={abrirModalInfo}>More</Link>
     </Space>
     </>
   )

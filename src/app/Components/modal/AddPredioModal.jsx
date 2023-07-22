@@ -39,7 +39,6 @@ export const AddPredioModal = () => {
         departamento: '',
         municipio: '',
     });
-    console.log(predio)
   };
 
   const cerrarModal = () => {
