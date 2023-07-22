@@ -1,52 +1,64 @@
-'use client'
-import React from 'react';
-import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
-import { Button, Layout, Menu, theme } from 'antd';
+  'use client'
+  import React, { useState} from 'react';
+  import {
+    MenuFoldOutlined,
+    MenuUnfoldOutlined,
+    UploadOutlined,
+    UserOutlined,
+    VideoCameraOutlined,
+  } from '@ant-design/icons';
+  import { Layout, Menu, Button, theme } from 'antd';
+  import Link from 'next/link';
+import { routes } from '../helpers/routes';
+import { Navigation } from './Navigation';
 
-const { Header, Content, Footer, Sider } = Layout;
+  const { Header, Sider, Content } = Layout;
+  const MainLayout = ({children}) => {
+    const [collapsed, setCollapsed] = useState(false);
+    const {
+      token: { colorBgLayout },
+    } = theme.useToken();
+  
+    return (
+      <Layout style={{ minHeight: '100vh' ,margin:0,padding:0 }}>      
+      <Sider trigger={null} collapsible collapsed={collapsed}>
+          <div className="demo-logo-vertical" />
+          <Navigation></Navigation>
+        </Sider>
+        <Layout>
+          <Header
+            style={{
+              padding: 0,
+              background: colorBgLayout
+              ,
+            }}
+          >
+            
+            <Button
+              type="text"
+              icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+              onClick={() => setCollapsed(!collapsed)}
+              style={{
+                fontSize: '16px',
+                width: 64,
+                height: 64,
+              }}
+            />
 
-
-const MainLayout= () => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
-
-  return (
-    <Layout>
-      <Button type='primary'>sdf</Button>
-      <Sider
-        breakpoint="lg"
-        collapsedWidth="0"
-        onBreakpoint={(broken) => {
-          console.log(broken);
-        }}
-        onCollapse={(collapsed, type) => {
-          console.log(collapsed, type);
-        }}
-      >
-        <div className="demo-logo-vertical" />
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={['4']}
-          items={[UserOutlined, VideoCameraOutlined, UploadOutlined, UserOutlined].map(
-            (icon, index) => ({
-              key: String(index + 1),
-              icon: React.createElement(icon),
-              label: `nav ${index + 1}`,
-            }),
-          )}
-        />
-      </Sider>
-      <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }} />
-        <Content style={{ margin: '24px 16px 0' }}>
-          <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>content</div>
-        </Content>
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
+            
+          </Header>
+          <Content
+            style={{
+              margin: '24px 16px',
+              padding: 24,
+              minHeight: 280,
+              background: 'white',
+            }}
+          >
+            {children}
+          </Content>
+        </Layout>
       </Layout>
-    </Layout>
-  );
-};
-
-export default MainLayout;
+    );
+  };
+  export default MainLayout;
