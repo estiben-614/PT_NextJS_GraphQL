@@ -1,20 +1,14 @@
 'use client'
-import { Modal } from 'antd'
+import { Button, Modal } from 'antd'
 import Card from 'antd/es/card/Card'
 import React, { useState } from 'react'
 import { ExtraElementsCards } from './ExtraElementsCards'
 import { useModal } from './customHooks/useModal'
 import { UpdatedPredioModal } from './Components/modal/updatedPredioModal'
+import Link from 'next/link'
 
 export const PredioItemCard = ({predio}) => {
-    // const [modal, setModal] = useState(false)
-
-    // const abrirModal=()=>{
-    //     setModal(true)
-    // }
-    // const cerrarModal=()=>{
-    //     setModal(false)
-    // }
+    
     //Para modal de información
     const {abrirModal:abrirModalInfo,cerrarModal:cerrarModalInfo,modal:modalInfo}=useModal()
 
@@ -47,6 +41,8 @@ export const PredioItemCard = ({predio}) => {
                     <li><strong>Avalúo :</strong> ${predio.avaluo}</li>
                     
                 </ul>
+
+                <Button type='primary'><Link href={`/propietarios/${predio.id_predio}`}>Ver propietarios</Link></Button>
                     
             </Modal>
 

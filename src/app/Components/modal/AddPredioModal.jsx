@@ -90,10 +90,11 @@ export const AddPredioModal = () => {
   return (
     <>
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-        <Button type="primary" onClick={abrirModal}>
-          Agregar Predio
-        </Button>
+          <Button type="primary" onClick={abrirModal}>
+            Agregar Predio
+          </Button>
       </div>
+
       <Modal
         title={`Registrar Predio`}
         open={modal}

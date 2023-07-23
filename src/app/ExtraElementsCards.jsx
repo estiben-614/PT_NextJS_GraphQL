@@ -38,7 +38,7 @@ export const ExtraElementsCards = ({idPredio,predio,abrirModalInfo,abrirModalAct
         <Button icon={<DeleteOutlined />} onClick={onDeletePredio}></Button>
 
         {/* Abre el modal de información */}
-        <Link href="#" onClick={abrirModalInfo}>More</Link>
+        <Link href="#" onClick={abrirModalInfo}>Más</Link>
     </Space>
     </>
   )

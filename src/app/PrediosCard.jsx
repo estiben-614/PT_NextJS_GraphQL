@@ -10,13 +10,16 @@ export const PrediosCard = () => {
     
 
     //Recuperamos los predios
-    const {data}=useGetPrediosQuery()
+    const {data,isLoading}=useGetPrediosQuery()
     if(data){
         const {predio}=data.data
         predios=predio
         console.log(data)
         
     }
+    // if(isLoading){
+    //   return <><h1>Cargando...</h1></>
+    // }
 
    
     
