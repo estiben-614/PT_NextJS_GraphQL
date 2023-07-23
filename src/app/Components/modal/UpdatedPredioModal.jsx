@@ -3,7 +3,7 @@ import { Button, Form, Input, Modal, message } from 'antd'
 import React, { useEffect, useState } from 'react'
 import {useGetPrediosQuery, useUpdatePredioByIdMutation } from '../../../../redux/api/Predios/predioApi'
 
-export const UpdatedPredioModal = ({predio,cerrarModalActualizacion,modalActualizacion,idPredio,refetch}) => {
+export const UpdatedPredioModal = ({predio,cerrarModalActualizacion,modalActualizacion,idPredio}) => {
 
     //Recuperamos los valores del predio
     const [predioActualizar, setPredioActualizar] = useState({
