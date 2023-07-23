@@ -46,6 +46,7 @@ export const PredioItemCard = ({predio}) => {
 
                 <Button type='primary'><Link href={`/propietarios/${predio.id_predio}`}>Ver propietarios</Link></Button>
                 <Button type='primary'><Link href={`/construcciones/${predio.id_predio}`}>Ver construcciones</Link></Button>
+                <Button type='primary'><Link href={`/terrenos/${predio.id_predio}`}>Ver terrenos</Link></Button>
                     
             </Modal>
 
