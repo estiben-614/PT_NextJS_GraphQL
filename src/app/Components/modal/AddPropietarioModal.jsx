@@ -153,7 +153,7 @@ export const AddPropietarioModal = ({id}) => {
             
             <Form {...layout}>
                 <Form.Item label="Tipo de persona">
-                    <Select onChange={handleSelect} allowClear>
+                    <Select onChange={handleSelect} value={undefined} allowClear>
                         <Select.Option value="PN">Persona Natural</Select.Option>
                         <Select.Option value="PJ">Persona Jurídica</Select.Option>
                     </Select>

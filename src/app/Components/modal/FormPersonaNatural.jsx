@@ -6,7 +6,7 @@ export const FormPersonaNatural = ({handleInput,handleSelect,propietario}) => {
   return (
     <>
                             <Form.Item label="* Tipo de documento">
-                                <Select onChange={handleSelect}>
+                                <Select onChange={handleSelect} value={propietario.tipo_documento_pn}>
                                     <Select.Option value="CC">Cédula de ciudadania</Select.Option>
                                     <Select.Option value="Pasaporte">Pasaporte</Select.Option>
                                 </Select>

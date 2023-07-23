@@ -18,11 +18,13 @@ export const PredioItemCard = ({predio}) => {
   return (
     
     <>
-         <Card
+         <Card  
                 title={predio.nombre}
                 extra={<ExtraElementsCards predio={predio} idPredio={predio.id_predio} abrirModalInfo={abrirModalInfo} abrirModalActualizacion={abrirModalActualizacion}></ExtraElementsCards>}
                 style={{
-                width: 300}
+                width: 300,
+                boxShadow: '1px 2px 4px rgba(0, 0, 0, 0.3)'
+                }
                 }
             >
                 <p><strong>Número Predial :</strong> {predio.numero_predial}</p>
