@@ -7,10 +7,10 @@ export const routes=[{
     },
     {
     label:'Pag2',
-    route:'/pag2',
+    route:'#',
     icon:<ContactsOutlined></ContactsOutlined>
     },
     {
     label:'Post',
-    route:'/post'
+    route:'#'
     }]
