@@ -116,7 +116,7 @@ export const AddPropietarioModal = ({id}) => {
             
             
         } catch (error) {
-            console.log(error)
+            errorMessage()
         }
 
     }
@@ -143,10 +143,10 @@ export const AddPropietarioModal = ({id}) => {
 
         <Modal title={`Agregar propietario`} open={modalPropietario} onCancel={cerrarModalPropietario} onOk={cerrarModalPropietario} 
                 footer={[
-                    <Button type="primary" onClick={cerrarModalPropietario}>
-                            Cancelar
+                    <Button key="cancelar" type="primary" onClick={cerrarModalPropietario}>
+                            Cancelar 
                     </Button>,
-                    <Button type="primary" onClick={accion}>
+                    <Button key="crear" type="primary" onClick={accion}>
                             Crear
                     </Button>,
                 ]}>

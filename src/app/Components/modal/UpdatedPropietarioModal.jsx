@@ -95,10 +95,10 @@ export const UpdatedPropietarioModal = ({abrirModalPropietarios,cerrarModalPropi
         }
   return (
     <Modal title={`Editar propietario`} open={modalPropietarios} onOk={cerrarModalPropietarios} onCancel={cerrarModalPropietarios} footer={[
-        <Button type="primary" onClick={cerrarModalPropietarios}>
+        <Button key="cancelar" type="primary" onClick={cerrarModalPropietarios}>
             Cancelar
         </Button>,
-        <Button type="primary" onClick={accion}>
+        <Button key="editar" type="primary" onClick={accion}>
             Editar
         </Button>,]}>     
 

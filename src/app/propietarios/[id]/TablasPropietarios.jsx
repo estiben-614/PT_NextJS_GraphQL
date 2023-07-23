@@ -12,15 +12,15 @@ const TablasPropietarios =  ({ id }) => {
   //Función para borrar propietario por id
   const [deletePropietarioById]=useDeletePropietarioByIdMutation()
 
-  //Función para actualizar propietario por id
-  const [addPropietarioByIdPredio]=useUpdatePropietarioByIdMutation()
+  // //Función para actualizar propietario por id
+  // const [addPropietarioByIdPredio]=useUpdatePropietarioByIdMutation()
 
   if(data){
     propietarios=data.data.propietarios
   }
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
 
   const propietariosNaturales=propietarios.filter(propietario=>(
     propietario.tipo_persona=='PN'
@@ -37,8 +37,8 @@ const TablasPropietarios =  ({ id }) => {
 
   return (
     <>
-        <TablaPropietariosNaturales addPropietarioByIdPredio={addPropietarioByIdPredio} refetch={refetch} deletePropietarioById={deletePropietarioById} propietariosNaturales={propietariosNaturales}></TablaPropietariosNaturales>
-        <TablaPropietariosJuridicos addPropietarioByIdPredio={ addPropietarioByIdPredio} refetch={refetch} deletePropietarioById={deletePropietarioById} propietariosJuridicos={propietariosJuridicos}></TablaPropietariosJuridicos>
+        <TablaPropietariosNaturales  refetch={refetch} deletePropietarioById={deletePropietarioById} propietariosNaturales={propietariosNaturales}></TablaPropietariosNaturales>
+        <TablaPropietariosJuridicos  refetch={refetch} deletePropietarioById={deletePropietarioById} propietariosJuridicos={propietariosJuridicos}></TablaPropietariosJuridicos>
     </>
   );
 };

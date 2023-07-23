@@ -80,10 +80,10 @@ export const UpdatedPredioModal = ({predio,cerrarModalActualizacion,modalActuali
   return (
     <>  
         <Modal title={`Editar de datos del predio ${predio.nombre}`} open={modalActualizacion} onOk={cerrarModalActualizacion} onCancel={cerrarModalActualizacion} footer={[
-                <Button type="primary" onClick={cerrarModalActualizacion}>
+                <Button key="cancelar" type="primary" onClick={cerrarModalActualizacion}>
                     Cancelar
                 </Button>,
-                <Button type="primary" onClick={accion}>
+                <Button key="editar" type="primary" onClick={accion}>
                     Editar
                 </Button>,
         ]}>

@@ -101,10 +101,10 @@ export const AddPredioModal = () => {
         onCancel={cerrarModal}
         onOk={cerrarModal}
         footer={[
-          <Button type="primary" onClick={cerrarModal}>
+          <Button key="cancelar" type="primary" onClick={cerrarModal}>
             Cancelar
           </Button>,
-          <Button type="primary" onClick={accion}>
+          <Button key="crear" type="primary" onClick={accion}>
             Crear
           </Button>,
         ]}
