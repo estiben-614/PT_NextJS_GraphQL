@@ -105,7 +105,7 @@ export const AddPredioModal = () => {
             Cancelar
           </Button>,
           <Button key="crear" type="primary" onClick={accion}>
-            Crear
+            Registrar
           </Button>,
         ]}
       >
@@ -113,16 +113,16 @@ export const AddPredioModal = () => {
       remember: true,
     }}   >
 
-          <Form.Item label="Número Predial">
+          <Form.Item label="* Número Predial">
             <Input type='number' name="numero_predial" onChange={handleInput} value={predio.numero_predial}></Input>
           </Form.Item>
-          <Form.Item label="Nombre" >
+          <Form.Item label="* Nombre" >
             <Input type='text' name="nombre" onChange={handleInput} value={predio.nombre}></Input>
           </Form.Item>
-          <Form.Item label="Avalúo">
+          <Form.Item label="* Avalúo">
             <Input type='number' name="avaluo" onChange={handleInput} value={predio.avaluo}></Input>
           </Form.Item>
-          <Form.Item label="Departamento">
+          <Form.Item label="* Departamento">
             <Input type='text' name="departamento"  onChange={handleInput} value={predio.departamento}></Input>
           </Form.Item>
           <Form.Item label="Municipio">
