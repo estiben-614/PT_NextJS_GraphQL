@@ -30,7 +30,7 @@ const MyBreadcrumb = ({id}) => (
         href: `/construcciones/${id}`,
         title: (
           <>
-            <ApartmentOutlined />
+            <BankOutlined />
             <span>Construcciones</span>
           </>
         ),
@@ -39,7 +39,7 @@ const MyBreadcrumb = ({id}) => (
         href: `/terrenos/${id}`,
         title: (
           <>
-            <BankOutlined />
+            <ApartmentOutlined />
             <span>Terreno</span>
           </>
         ),

@@ -27,6 +27,8 @@ export const TablaPropietariosNaturales = ({propietariosNaturales,deletePropieta
 
   //Eliminar propietario según su id
     const handleEliminar=async(id)=>{
+      const confirmacion=window.confirm('¿Está seguro que desea eliminar el propietario')
+      if(confirmacion){
         try {
           const propietarioEliminado=await deletePropietarioById(id)
           successMessage()
@@ -34,6 +36,9 @@ export const TablaPropietariosNaturales = ({propietariosNaturales,deletePropieta
         } catch (error) {
           errorMessage()
         }
+
+      }
+
     }
 
     //Abrir modal y recuperamos al propietario con ese id

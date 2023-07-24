@@ -22,13 +22,19 @@ export const ExtraElementsCards = ({idPredio,predio,abrirModalInfo,abrirModalAct
   };
 
     const onDeletePredio=async()=>{
+      const confirmacion=window.confirm('¿Está seguro que desea eliminar el predio')
+
+      if(confirmacion){
+
         try{
+
             await deletePredioById(idPredio)
             refetch() //actualizamos
             successMessage()
           }catch(error){
             errorMessage(   )
           }
+      }
     }
   return (
     <>

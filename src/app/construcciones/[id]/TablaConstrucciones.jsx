@@ -27,6 +27,10 @@ export const TablaConstrucciones = ({construcciones,deleteConstruccionById,refet
 
   //Eliminar construccion según su id
     const handleEliminar=async(id)=>{
+
+      const confirmacion=window.confirm('¿Está seguro que desea eliminar la construcción')
+      if(confirmacion){
+        
         try {
           const construccionEliminado=await deleteConstruccionById(id)
           successMessage()
@@ -34,6 +38,7 @@ export const TablaConstrucciones = ({construcciones,deleteConstruccionById,refet
         } catch (error) {
           errorMessage()
         }
+      }
     }
 
     //Abrir modal y recuperamos al construccion con ese id

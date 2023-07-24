@@ -28,6 +28,9 @@ export default function TablaTerrenos({terrenos,deleteTerrenoById,refetch,constr
 
   //Eliminar terreno según su id
     const handleEliminar=async(id)=>{
+      const confirmacion=window.confirm('¿Está seguro que desea eliminar el predio')
+      if(confirmacion){
+        
         try {
           const terrenoEliminado=await deleteTerrenoById(id)
           successMessage()
@@ -35,6 +38,7 @@ export default function TablaTerrenos({terrenos,deleteTerrenoById,refetch,constr
         } catch (error) {
           errorMessage()
         }
+      }
     }
     //Abrir modal y recuperamos el terreno con ese id
     const handleEditar=async(id)=>{  

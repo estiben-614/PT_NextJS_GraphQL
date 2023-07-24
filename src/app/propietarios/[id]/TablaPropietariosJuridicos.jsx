@@ -27,12 +27,16 @@ export const TablaPropietariosJuridicos = ({propietariosJuridicos,deletePropieta
 
     //Eliminar propietario según su id
     const handleEliminar=async(id)=>{
-        try {
-          const propietarioEliminado=await deletePropietarioById(id)
-          successMessage()
-          refetch()
-        } catch (error) {
-          errorMessage()
+        const confirmacion=window.confirm('¿Está seguro que desea eliminar el propietario?')
+        if(confirmacion){
+
+            try {
+              const propietarioEliminado=await deletePropietarioById(id)
+              successMessage()
+              refetch()
+            } catch (error) {
+              errorMessage()
+            }
         }
     }
 

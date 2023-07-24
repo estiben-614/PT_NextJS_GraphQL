@@ -1,13 +1,13 @@
-import { ContactsOutlined, HomeOutlined } from "@ant-design/icons";
+import { AuditOutlined, HomeOutlined } from "@ant-design/icons";
 
 export const routes=[{
-    label:'Home',
+    label:'Inicio',
     route:'/',
     icon:<HomeOutlined></HomeOutlined>
     },
     {
     label:'Predios',
     route:'/predios',
-    icon:<ContactsOutlined></ContactsOutlined>
+    icon:<AuditOutlined /> 
     },
     ]
