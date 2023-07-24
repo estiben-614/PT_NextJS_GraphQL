@@ -125,7 +125,7 @@ export const AddPredioModal = () => {
           <Form.Item label="* Departamento">
             <Input type='text' name="departamento"  onChange={handleInput} value={predio.departamento}></Input>
           </Form.Item>
-          <Form.Item label="Municipio">
+          <Form.Item label="* Municipio">
             <Input  name="municipio" type="text" onChange={handleInput} value={predio.municipio}></Input>
           </Form.Item>
         </Form>
