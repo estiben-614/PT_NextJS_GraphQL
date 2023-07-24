@@ -3,7 +3,7 @@
 import {  Space } from 'antd'
 import React  from 'react'
 import { PredioItemCard } from './PredioItemCard'
-import { useGetPrediosQuery } from '../../redux/api/Predios/predioApi'
+import { useGetPrediosQuery } from '../../../redux/api/Predios/predioApi' 
 
 export const PrediosCard = () => {
     let predios=null

@@ -1,11 +1,11 @@
 'use client'
 import { Button, Modal, Space } from 'antd'
 import Card from 'antd/es/card/Card'
-import React, { useState } from 'react'
+import React from 'react'
 import { ExtraElementsCards } from './ExtraElementsCards'
-import { useModal } from './customHooks/useModal'
-import { UpdatedPredioModal } from './Components/modal/updatedPredioModal'
 import Link from 'next/link'
+import { useModal } from '../customHooks/useModal'
+import { UpdatedPredioModal } from '../Components/modal/UpdatedPredioModal'
 
 export const PredioItemCard = ({predio}) => {
     

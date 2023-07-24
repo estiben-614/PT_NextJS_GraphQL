@@ -1,4 +1,4 @@
-import { ApartmentOutlined, BankOutlined, HomeOutlined, UserOutlined } from '@ant-design/icons';
+import { ApartmentOutlined, AuditOutlined, BankOutlined, HomeOutlined, UserOutlined } from '@ant-design/icons';
 import { Breadcrumb } from 'antd';
 import React from 'react';
 const MyBreadcrumb = ({id}) => (
@@ -7,6 +7,15 @@ const MyBreadcrumb = ({id}) => (
       {
         href: '/',
         title: <HomeOutlined />,
+      },
+      {
+        href: `/predios`,
+        title: (
+          <>
+            <AuditOutlined /> 
+            <span>Predios</span>
+          </>
+        ),
       },
       {
         href: `/propietarios/${id}`,
