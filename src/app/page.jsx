@@ -1,14 +1,7 @@
-import { Button, Card, DatePicker, Space } from 'antd';
-import { AddPredioModal } from './Components/modal/addPredioModal';
-import { PrediosCard } from './PrediosCard';
+import React from 'react'
 
-
-export default function Home() {
-
+export default function page() {
   return (
-    <>
-      <AddPredioModal></AddPredioModal>  
-      <PrediosCard></PrediosCard>
-    </>
+    <div>page</div>
   )
 }

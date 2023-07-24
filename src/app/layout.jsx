@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google'
 import StyledComponentsRegistry from './lib/AntdRegistry'
 
 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {

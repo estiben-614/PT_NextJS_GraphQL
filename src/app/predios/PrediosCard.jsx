@@ -24,7 +24,7 @@ export const PrediosCard = () => {
     
   return (
     <>
-    <marquee style={{marginTop:20}}>Para información de propietarios,construcciones y terrenos de click en más.</marquee>
+    <marquee style={{marginTop:20}}>Para información de propietarios,construcciones y terrenos de click en <strong style={{color:'#1677ff'}}>Más</strong>.</marquee>
     {   (predios) &&
         predios.map(predio=>(
             <Space direction="horizontal" style={{margin:20 }}  key={predio.id_predio} >

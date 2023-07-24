@@ -3,7 +3,7 @@ import { DeleteOutlined, EditOutlined } from '@ant-design/icons'
 import { Button, Space, message } from 'antd'
 import Link from 'next/link'
 import React from 'react'
-import { useDeletePredioByIdMutation, useGetPrediosQuery } from '../../redux/api/Predios/predioApi'
+import { useDeletePredioByIdMutation, useGetPrediosQuery } from '../../../redux/api/Predios/predioApi'
 
 export const ExtraElementsCards = ({idPredio,predio,abrirModalInfo,abrirModalActualizacion}) => {
 
