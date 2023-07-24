@@ -89,7 +89,7 @@ export const AddPredioModal = () => {
 
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }} >
           <Button type="primary" onClick={abrirModal}>
             Agregar Predio
           </Button>

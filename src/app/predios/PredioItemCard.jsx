@@ -6,6 +6,8 @@ import { ExtraElementsCards } from './ExtraElementsCards'
 import Link from 'next/link'
 import { useModal } from '../customHooks/useModal'
 import { UpdatedPredioModal } from '../Components/modal/UpdatedPredioModal'
+import 'animate.css/animate.min.css'
+
 
 export const PredioItemCard = ({predio}) => {
     
@@ -27,6 +29,8 @@ export const PredioItemCard = ({predio}) => {
                 boxShadow: '1px 2px 4px rgba(0, 0, 0, 0.3)'
                 }
                 }
+                className='animate__animated animate__fadeInUp'
+                
             >
                 <p><strong>Número Predial :</strong> {predio.numero_predial}</p>
                 <p><strong>Avalúo:</strong>     $ {predio.avaluo}</p>

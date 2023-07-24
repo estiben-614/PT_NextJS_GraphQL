@@ -5,8 +5,8 @@ import { useServerInsertedHTML } from 'next/navigation';
 import React from 'react';
 import MainLayout from '../Components/MainLayout';
 
+const cache = createCache();
 const StyledComponentsRegistry = ({ children }) => {
-  const cache = createCache();
   useServerInsertedHTML(() => (
     <style id="antd" dangerouslySetInnerHTML={{ __html: extractStyle(cache, true) }} />
   ));

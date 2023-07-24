@@ -1,7 +1,10 @@
 import React from 'react'
+import { GraficaCircular } from './Components/Graficas/GraficaCircular'
 
 export default function page() {
   return (
-    <div>page</div>
+    <>
+      <GraficaCircular></GraficaCircular>
+    </>
   )
 }
