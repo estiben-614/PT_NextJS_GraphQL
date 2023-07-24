@@ -55,7 +55,8 @@ export default function TablaTerrenos({terrenos,deleteTerrenoById,refetch,constr
         {
         title:'Valor comercial',
         dataIndex:'valor_comercial',
-        key:'valor_comercial'
+        key:'valor_comercial',
+        render:(valor_comercial)=>((`$ ${valor_comercial}`))
         },
         {
         title:'Funtes de agua',

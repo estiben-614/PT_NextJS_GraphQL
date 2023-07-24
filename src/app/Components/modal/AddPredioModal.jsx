@@ -89,7 +89,7 @@ export const AddPredioModal = () => {
 
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }} >
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }} className='animate__animated animate__fadeInUp'>
           <Button type="primary" onClick={abrirModal}>
             Agregar Predio
           </Button>

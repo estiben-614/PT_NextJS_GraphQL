@@ -147,7 +147,7 @@ export const AddPropietarioModal = ({id}) => {
                             Cancelar 
                     </Button>,
                     <Button key="crear" type="primary" onClick={accion}>
-                            Crear
+                            Agregar
                     </Button>,
                 ]}>
             

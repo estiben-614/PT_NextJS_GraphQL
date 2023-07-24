@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Pie, measureTextWidth } from '@ant-design/plots';
 import { useGetPrediosQuery } from '../../../../redux/api/Predios/predioApi';
 
-export const GraficaCircular = () => {
-  const [first, setFirst] = useState([]);
+export const PrediosPorDepartamento = () => {
+  const [prediosByDepartamento, setPrediosByDepartamento] = useState([]);
 
   function renderStatistic(containerWidth, text, style) {
     const { width: textWidth, height: textHeight } = measureTextWidth(text, style);
@@ -25,12 +25,12 @@ export const GraficaCircular = () => {
 
   useEffect(() => {
     if (predios) {
-      const prediosByDepartamento = predios.data.predio;
-      // Objeto para almacenar el recuento de predios por departamento (hashmap)
+      const prediosTotales = predios.data.predio;
+      // Objeto para almacenar el recuento de predios por departamento 
       const departamentoCount = {};
 
       // Recorremos el array de predios y contamos cuántos tienen cada departamento
-      prediosByDepartamento.forEach((predio) => {
+      prediosTotales.forEach((predio) => {
         const departamento = predio.departamento;
         if (departamentoCount[departamento]) {
           departamentoCount[departamento]++;
@@ -39,19 +39,21 @@ export const GraficaCircular = () => {
         }
       });
 
-      console.log(departamentoCount);
-      setFirst(
+      setPrediosByDepartamento(
         Object.entries(departamentoCount).map(([departamento, count]) => ({
           type: departamento,
           value: count,
         }))
       );
     }
+    else {
+      setPrediosByDepartamento([])
+    }
   }, [predios]);
 
   const config = {
     appendPadding: 10,
-    data: first, 
+    data: prediosByDepartamento, 
     angleField: 'value',
     colorField: 'type',
     radius: 1,

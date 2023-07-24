@@ -124,7 +124,7 @@ export const AddConstruccionModal = ({id}) => {
                     <Input type='number' name="numero_pisos"   onChange={handleInput} value={construccion.numero_pisos}></Input>
                 </Form.Item>
 
-                <Form.Item label="* Área total">
+                <Form.Item label="* Área total [m²]">
                      <Input type='number' name="area_total"  onChange={handleInput} value={construccion.area_total}></Input>
                 </Form.Item>
 
