@@ -16,6 +16,10 @@ export default function RootLayout({ children }) {
    
 
     <html lang="es">
+          <head>
+                    <link rel="icon" href="/icono.png" type="image/png" />
+
+          </head>
            <Providers>
             <body >
                 <StyledComponentsRegistry>{children}</StyledComponentsRegistry>            
