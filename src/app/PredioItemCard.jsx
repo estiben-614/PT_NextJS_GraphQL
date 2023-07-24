@@ -1,5 +1,5 @@
 'use client'
-import { Button, Modal } from 'antd'
+import { Button, Modal, Space } from 'antd'
 import Card from 'antd/es/card/Card'
 import React, { useState } from 'react'
 import { ExtraElementsCards } from './ExtraElementsCards'
@@ -18,6 +18,7 @@ export const PredioItemCard = ({predio}) => {
   return (
     
     <>
+    
          <Card  
                 title={predio.nombre}
                 extra={<ExtraElementsCards predio={predio} idPredio={predio.id_predio} abrirModalInfo={abrirModalInfo} abrirModalActualizacion={abrirModalActualizacion}></ExtraElementsCards>}
@@ -43,10 +44,17 @@ export const PredioItemCard = ({predio}) => {
                     <li><strong>Avalúo :</strong> ${predio.avaluo}</li>
                     
                 </ul>
+            <div>
+            <Space size={30} style={{marginTop:20}}>
 
-                <Button type='primary'><Link href={`/propietarios/${predio.id_predio}`}>Ver propietarios</Link></Button>
-                <Button type='primary'><Link href={`/construcciones/${predio.id_predio}`}>Ver construcciones</Link></Button>
-                <Button type='primary'><Link href={`/terrenos/${predio.id_predio}`}>Ver terrenos</Link></Button>
+              <Button type='primary'><Link href={`/propietarios/${predio.id_predio}`}>Ver propietarios</Link></Button>
+              <Button type='primary'><Link href={`/construcciones/${predio.id_predio}`}>Ver construcciones</Link></Button>
+              <Button type='primary'><Link href={`/terrenos/${predio.id_predio}`}>Ver terrenos</Link></Button>
+
+            </Space>
+                
+            </div>
+                
                     
             </Modal>
 

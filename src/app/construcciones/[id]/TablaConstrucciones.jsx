@@ -58,7 +58,7 @@ export const TablaConstrucciones = ({construcciones,deleteConstruccionById,refet
     key:'numero_pisos'
     },
     {
-    title:'Área total',
+    title:'Área total [m²]',
     dataIndex:'area_total',
     key:'area_total'
     },

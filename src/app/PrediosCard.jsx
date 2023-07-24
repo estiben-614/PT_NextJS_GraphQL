@@ -14,7 +14,6 @@ export const PrediosCard = () => {
     if(data){
         const {predio}=data.data
         predios=predio
-        console.log(data)
         
     }
     // if(isLoading){
@@ -25,14 +24,12 @@ export const PrediosCard = () => {
     
   return (
     <>
-
+    <marquee style={{marginTop:20}}>Para información de propietarios,construcciones y terrenos de click en más.</marquee>
     {   (predios) &&
         predios.map(predio=>(
-            <Space direction="horizontal" style={{
-                margin:20
-            }}  >
+            <Space direction="horizontal" style={{margin:20 }}  key={predio.id_predio} >
                 
-               <PredioItemCard predio={predio}></PredioItemCard>
+               <PredioItemCard  predio={predio}></PredioItemCard>
           </Space>
         ))
     }

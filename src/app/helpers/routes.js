@@ -10,7 +10,4 @@ export const routes=[{
     route:'#',
     icon:<ContactsOutlined></ContactsOutlined>
     },
-    {
-    label:'Post',
-    route:'#'
-    }]
+    ]

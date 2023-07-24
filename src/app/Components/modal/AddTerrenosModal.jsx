@@ -124,7 +124,7 @@ export default function AddTerrenosModal({id}) {
 
           <Form {...layout}>
 
-                  <Form.Item label="* Área">
+                  <Form.Item label="* Área [m²]">
                       <Input type='number' name="area"   onChange={handleInput} value={terreno.area}></Input>
                   </Form.Item>
 

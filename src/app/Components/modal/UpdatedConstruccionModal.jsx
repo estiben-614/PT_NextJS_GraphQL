@@ -97,7 +97,7 @@ export const UpdatedConstruccionModal = ({abrirModalConstrucciones,cerrarModalCo
                     <Input type='number' name="numero_pisos"   onChange={handleInput} value={construccionActualizar.numero_pisos}></Input>
                 </Form.Item>
 
-                <Form.Item label="* Área total">
+                <Form.Item label="* Área total [m²]">
                      <Input type='number' name="area_total"  onChange={handleInput} value={construccionActualizar.area_total}></Input>
                 </Form.Item>
 

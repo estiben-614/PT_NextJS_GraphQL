@@ -48,7 +48,7 @@ export default function TablaTerrenos({terrenos,deleteTerrenoById,refetch,constr
 
     const columns=[
         {
-        title:'Área',
+        title:'Área [m²]',
         dataIndex:'area',
         key:'area'
         },

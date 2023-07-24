@@ -86,7 +86,7 @@ export default function UpdatedTerrenosModal({abrirModalTerrenos,cerrarModalTerr
 
         <Form {...layout}>
 
-                <Form.Item label="* Área">
+                <Form.Item label="* Área [m²]">
                     <Input type='number' name="area"   onChange={handleInput} value={terrenoActualizar.area}></Input>
                 </Form.Item>
 
